@@ -1,6 +1,6 @@
 # Finger → Skull Regression (Simple Linear)
 
-Browser-based **simple linear regression** calculator for Finger (X) vs Skull (Y), with **prediction + confidence interval** and a built-in **OCR importer** (Tesseract.js) to extract values from a screenshot/table.
+Browser-based **simple linear regression** calculator for Finger (X) vs Skull (Y), with **prediction + confidence interval**.
 
 ## Features
 
@@ -14,7 +14,6 @@ Browser-based **simple linear regression** calculator for Finger (X) vs Skull (Y
   - t-test for slope + R²
   - Confidence interval for prediction at `x0`
 - **Graph**: scatter plot + fitted line + prediction marker
-- **OCR upload**: upload a screenshot of a table and auto-fill values (expects rows like `id finger skull`)
 - Everything runs in the browser (no backend).
 
 ## Input tips
@@ -30,18 +29,34 @@ finger_values = [8.1, 7.9, 8.2]
 skull_values  = [53.5, 57.7, 56.8]
 ```
 
-### 3) OCR table format
-From OCR text it tries to parse triples:
 
+## Run locally
+
+This is a static app.
+
+### Option A: Open directly
+Open `index.html` in your browser.
+
+### Option B: Use a local server (recommended)
+From the project folder:
+
+```bash
+python3 -m http.server 5173
+# then open http://localhost:5173
 ```
-1 8.1 53.5
-2 7.9 57.7
-...
+
+## Build
+
+Build copies static files into `dist/`:
+
+```bash
+npm run build
 ```
+
+Output: `dist/index.html`, `dist/app.js`, `dist/style.css`
+
 
 ## Tech
 
 - Vanilla HTML/CSS/JS (ES Modules)
-- OCR: `tesseract.js` via CDN
 - Static build: `build.mjs` (copies files to `dist/`)
-
