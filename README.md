@@ -1,10 +1,10 @@
-# Finger → Skull Regression (Simple Linear)
+# X → Y Regression (Simple Linear)
 
-Browser-based **simple linear regression** calculator for Finger (X) vs Skull (Y), with **prediction + confidence interval**.
+Browser-based **simple linear regression** calculator for X vs Y, with **prediction + confidence interval**.
 
 ## Features
 
-- Paste/enter `finger` (X) and `skull` (Y) values (comma/space/newline separated)
+- Paste/enter X and Y values (comma/space/newline separated)
 - Predict at a chosen `x0` with 90/95/99% confidence level
 - Shows:
   - Totals & cross-products: Σx, Σy, Σx², Σy², Σxy
